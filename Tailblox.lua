@@ -29,7 +29,7 @@ return function(scheme: {[string]: any}): Theme
 						targetObject[k] = v
 					end)
 					if not success then
-						warn("Failed to apply property: " .. tostring(k) .. " - " .. tostring(err))
+						warn("[TAILBLOX]: Failed to apply property: " .. tostring(k) .. " - " .. tostring(err))
 					end
 				end
 			end
@@ -47,7 +47,7 @@ return function(scheme: {[string]: any}): Theme
 			end)
 			table.insert(self._runningTasks, taskThread)
 		else
-			warn("No function named '" .. functionName .. "' in the scheme.")
+			warn("[TAILBLOX]: No function named '" .. functionName .. "' in the scheme.")
 		end
 	end
 
