@@ -14,7 +14,7 @@ return function(scheme: {[string]: any}): Theme
 	self._scheme = scheme
 	self._runningTasks = {}
 
-	function self:apply(targetObject: GuiObject)
+	function self:apply(targetObject: GuiObject) -- YOU MUST RUN THE FUNCTION WITH A COLON OTHERWISE IT WILL BREAK AT RUNTIME
 		-- Applies all properties in the theme class to the target object
 		task.spawn(function()
 			for k, v in pairs(self._scheme) do
